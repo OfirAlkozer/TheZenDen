@@ -5,6 +5,7 @@
 
 * {
     margin: 0;
+    font-family: H2Font;
     padding: 0;
 }
 
@@ -24,10 +25,10 @@ body {
 /*HEADER ELEMENT STYLING*/
 header {
     display: grid;
-    width: 80%;
+    width: 100%;
     max-height: 180px;
-    background-color: #EFBC9B;
-    grid-template-columns: 1fr 2fr;
+    background-color: #D38B5D;
+    grid-template-columns: 1fr 4fr 4fr 1fr;
     grid-template-rows: 1fr 1fr;
 
 }
@@ -35,46 +36,40 @@ header {
 .left-nav {
     display: grid;
     width: 100%;
-    grid-area: 1/span 1 /2 /2;
+    grid-area: 1/ 2 /2 /3;
 }
 
 .logo {
     margin-top: 10px;
     width: 150px;
     height: 150px;
-    justify-self: center;
 }
 
 .nav {
     display: grid;
     width: 100%;
-    grid-area: 1/ 2 / 2 /3;
 }
 
 .navlink {
     float: right;
     text-decoration: none;
     color: #000;
-    height: 15px;
     padding: 10px;
     font-size: 25px;
     margin-top: 20px;
-    margin-bottom: 20px;
     font-family: H2Font;
-    line-height: 2.5;
-    box-shadow: inset 0 0 0 0 #9CAFAA;
+    box-shadow: inset 0 0 0 0 white;
     transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
 }
 
 .active {
-    color: #4c504f;
     text-decoration: underline;
-    text-decoration-color: #9CAFAA;
+    text-decoration-color: #7A6C5D;
 }
 
 .navlink:hover {
-    color: #FBF3D5;
-    box-shadow: inset 200px 0 0 0 #9CAFAA;
+    color: black;
+    box-shadow: inset 200px 0 0 0 white;
 }
 
 .subheader {
@@ -85,7 +80,7 @@ header {
 }
 
 .desc {
-    color: #9CAFAA;
+    color: white;
 }
 
 .buttonshopnow {
@@ -93,7 +88,11 @@ header {
     height: 25px;
     margin-top: 10px;
     color: #FBF3D5;
-    background-color: #9CAFAA;
+    background-color: #7A6C5D;
+}
+
+.page-title {
+    margin: 50px 0px;
 }
 
 /* STORE PAGE */
@@ -105,6 +104,7 @@ header {
     width: 80%;
     height: 450px;
     margin-bottom: 10px;
+    
 }
 
 .store-product {
@@ -112,9 +112,8 @@ header {
 
     width: 100%;
     margin: auto;
-    background-color: #9CAFAA;
+    background-color: #7A6C5D;
     height: 450px;
-    border: 1px solid grey;
 }
 
 
@@ -122,68 +121,61 @@ header {
 /*LATEST PRODUCT ELEMENT STYLING*/
 .product-card-strip {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 5fr 1fr 1fr 1fr;
     gap: 10px;
     width: 80%;
-    height: 450px;
-    margin-bottom: 10px;
+    margin-bottom: 75px;
+}
+
+.product-card {
+    display: grid;
+    justify-items: center;
+    width: 100%;
+    margin: auto;
+    background-color: #D38B5D;
+    height: 500px;
 }
 
 .product-card1 {
-    display: grid;
-    justify-items: center;
     grid-area: 1/1/5/2;
-    width: 100%;
-    margin: auto;
-    background-color: #9CAFAA;
-    height: 450px;
-    border: 1px solid grey;
 }
 
 .product-card2 {
-    display: grid;
-    justify-items: center;
     grid-area: 1/2/5/3;
-    width: 100%;
-    margin: auto;
-    background-color: #9CAFAA;
-    height: 450px;
-    border: 1px solid grey;
 }
 
 .product-card3 {
-    display: grid;
-    justify-items: center;
     grid-area: 1/3/5/4;
-    width: 100%;
-    margin: auto;
-    background-color: #9CAFAA;
-    height: 450px;
-    border: 1px solid grey;
 }
+
+.product-card4 {
+    grid-area: 6/1/10/2;
+}
+
 
 .product-card1 h2,
 .product-card2 h2,
 .product-card3 h2 {
-    color: #FBF3D5;
+    color: black;
     font-family: H2Font;
 }
 
-.product-image1,
-.product-image2,
-.product-image3 {
+.product-image {
+    margin: 20px 0px;
     width: 200px;
     height: 320px;
 }
 
 .buttoncart {
-    width: 100px;
-    height: 25px;
+    width: 150px;
+    height: 50px;
     color: #FBF3D5;
-    background-color: #EFBC9B;
+    background-color: #1e1e1e;
+    border: white;
+    text-transform: uppercase;
+    font-weight: 700;
+    border-radius: 25px;
+    
 }
-
 /*FEATURED PRODUCT ELEMENT STYLING*/
 .featured-product {
     display: grid;
@@ -191,8 +183,7 @@ header {
     height: 180px;
     background-color: #EFBC9B;
     grid-template-columns: 1fr 2fr;
-    margin-bottom: 10px;
-
+    margin-bottom: 75px;
 }
 
 .featured-product h2 {
@@ -218,10 +209,21 @@ header {
 
 /*FOOTER  ELEMENT STYLING*/
 footer {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 8fr 1fr;
     justify-content: center;
-    width: 80%;
-    background-color: #9CAFAA;
+    width: 100%;
+    background-color: #7A6C5D;
+}
+
+header {
+
+    width: 100%;
+    max-height: 180px;
+    background-color: #D38B5D;
+
+    grid-template-rows: 1fr 1fr;
+
 }
 
 /* MEDIA QUERY TO KEEP IT RESPONSIVE FOR SMALLER SCREENS*/
@@ -246,7 +248,6 @@ footer {
         bottom: auto;
         left: auto;
         right: auto;
-        border-radius: 3px;
         margin: auto;
     }
 
