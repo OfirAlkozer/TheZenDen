@@ -99,21 +99,26 @@ header {
 .store-products {
     display: inline-flex;
 
-    /* flex-flow: row wrap; */
+    flex-flow: row wrap;
 
     width: 80%;
-    height: 450px;
+    height: 98%;
     margin-bottom: 10px;
+
+    /* border: 2px solid violet; */
+    overflow: scroll; 
     
 }
 
 .store-product {
+    display: flex;
 
 
     width: 100%;
     margin: auto;
-    background-color: #7A6C5D;
+    background-color: #9CAFAA;
     height: 450px;
+
 }
 
 
@@ -262,5 +267,12 @@ header {
         margin: auto;
         font-size: 15px;
         padding: 10px;
+    }
+}
+
+/* ALTER IMAGES AFTER SCREEN LESS WIDTH THAN 900PX */
+@media screen and (max-width: 900px) {
+    .store-products  {
+
     }
 }
